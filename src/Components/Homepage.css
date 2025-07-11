@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+}
+
+.homepage-design {
+    min-height: 200vh;
+    padding: 0;
+    transition: background-color 0.5s ease;
+
+}
+
+.homepage-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(20, 133, 239), #3e55e6, #13039f);
+    color: white;
+    text-align: center;
+ 
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.start-button,
+.feature-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #ff6a00;
+    color: white;
+    transition: all 0.3s ease;
+    margin-left: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.start-button:hover,
+.feature-button:hover {
+    background: #ff6a00;
+    transform: scale(1.2);
+    box-shadow: 10px 20px 16px rgba(254, 252, 252, 0.3);
+}
+
+.features-section {
+    background-color: #ffffff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.features-heading {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+.feature-box {
+    background: #f1f1f1;
+    border-radius: 15px;
+    padding: 3rem;
+    margin: 3rem auto;
+    max-width: 700px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation-duration: 0.8s;
+}
+
+.feature-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #e67e22;
+}
+
+.feature-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.feature-box ul li::before {
+    content: "✅";
+    color: green;
+    margin-right: 0.5rem;
+}
+
+.feature-box:hover {
+    color: black;
+    transform: scale(1.05);
+    border: 2px solid  #e67e22;
+}
+
+.bounce {
+    animation-name: bounceIn;
+}
+
+.fade {
+    animation-name: fadeIn;
+}
+
+.slide {
+    animation-name: slideIn;
+}
+
+.scale {
+    animation-name: scaleUp;
+}
+
+/* Animations */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Button Bounce Hover Animation */
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
