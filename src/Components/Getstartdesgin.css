@@ -1,4 +1,35 @@
+.Getstartdesign{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .Getstartpage-design {
-  margin-top: 3%;
-  margin-left: 33%;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  min-width: 100%;
+  margin-bottom: 57%;
+  background-color: rgb(41, 112, 253);
+  position:fixed;
+}
+
+.backbuttondesign{
+  margin-left: 68%;
+  border: 2px solid;
+  border-radius: 30px;
+  width: 100px;
+  height: 50px;
+  margin-top: 10px;
 }

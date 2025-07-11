@@ -67,7 +67,6 @@ function Homepage() {
               <li>Tic Tac Toe (with AI)</li>
               <li>Rock Paper Scissors</li>
               <li>Typing Speed Test</li>
-              <li>Random Useless Facts</li>
             </ul>
           </div>
 
