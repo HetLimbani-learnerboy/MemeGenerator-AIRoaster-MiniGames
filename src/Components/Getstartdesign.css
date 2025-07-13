@@ -1,8 +1,9 @@
-.Getstartdesign{
+.Getstartdesign {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
 }
+
 .section {
   height: 100vh;
   scroll-snap-align: start;
@@ -22,14 +23,26 @@
   min-width: 100%;
   margin-bottom: 57%;
   background-color: rgb(41, 112, 253);
-  position:fixed;
+  position: fixed;
 }
 
-.backbuttondesign{
+.backbuttondesign {
   margin-left: 68%;
-  border: 2px solid;
-  border-radius: 30px;
+  background: white;
   width: 100px;
   height: 50px;
-  margin-top: 10px;
+  margin-top: 0.7%;
+  border: 2px solid #1976d2;
+  border-radius: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition:  color 0.3s ease;
+}
+
+.backbuttondesign:hover {
+  color: black;
+  font-weight: bold;
 }

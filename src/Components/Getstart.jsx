@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
-import "./Getstartdesgin.css";
+import "./Getstartdesign.css";
 
 const Getstart = () => {
     const navigate = useNavigate();
