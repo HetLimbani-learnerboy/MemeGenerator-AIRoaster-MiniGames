@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./Getstartdesign.css";
+import TicTacToe from "./TicTacToe";
 
 const Getstart = () => {
     const navigate = useNavigate();
@@ -12,7 +13,7 @@ const Getstart = () => {
             "terriblefacebookmemes", "HistoryMemes", "AdviceAnimals", "MemeEconomy",
             "ComedyCemetery", "Animemes", "raimimemes", "okbuddyretard", "okbuddybaka",
             "IndianDankMemes", "DankIndianMemes", "reallifedoodles", "PewdiepieSubmissions",
-            "trippinthroughtime", "funnyandsad", "boottoobig", "starterpacks", "facepalm",
+            "trippinthroughtime", "boottoobig", "starterpacks", "facepalm",
             "techsupportgore", "bonehurtingjuice", "surrealmemes", "Antimeme",
             "catmemes", "dogmemes", "memez", "memesdaily", "memeaddict", "funnymemes"
         ];
@@ -175,17 +176,21 @@ const Getstart = () => {
 
 
             <section className="section">
-                <div className="Minigmaes">
+                <div className="Minigames">
                     <h3>🎮 Mini Games</h3>
                     <div className="Minigames-section">
                         <ul>
-                            <li className="game-1">Tic Tac Toe (with AI)</li>
-                            <li className="game-2">Rock Paper Scissors</li>
-                            <li className="game-3">Typing Speed Test</li>
+                            <li className="game-item game-1" >Tic Tac Toe</li>
+                            <li className="game-item game-2" >Rock Paper Scissors</li>
+                            <li className="game-item game-3" >Typing Speed Test</li>
                         </ul>
                     </div>
+
+               
                 </div>
             </section>
+
+
         </div>
     );
 };

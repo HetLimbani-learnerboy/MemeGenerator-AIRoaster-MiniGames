@@ -73,7 +73,7 @@ function Homepage() {
           <div className="feature-box scale">
             <h3>🌟 Bonus</h3>
             <ul>
-              <li>"Rate My Vibe" — Get your AI vibe score 😎</li>
+              <li>"Rate My WebApp" — Get your AI vibe score 😎 </li>
             </ul>
           </div>
         </div>
