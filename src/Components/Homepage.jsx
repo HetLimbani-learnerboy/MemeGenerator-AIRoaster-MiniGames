@@ -11,7 +11,7 @@ function Homepage() {
   if (!showFeatures) setShowFeatures(true);
   setTimeout(() => {
     featuresRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, 100); // Wait for features to render
+  }, 100); 
 };
   useEffect(() => {
     const handleScroll = () => {

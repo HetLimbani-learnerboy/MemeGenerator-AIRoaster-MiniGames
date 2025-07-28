@@ -18,7 +18,6 @@
 
 .Getstartpage-design {
   display: flex;
-  flex-direction: row;
   color: white;
   min-width: 100%;
   margin-bottom: 53%;
@@ -27,7 +26,7 @@
 }
 
 .backbuttondesign {
-  margin-left: 68%;
+  margin-left: 65%;
   background: white;
   width: 100px;
   height: 50px;
@@ -104,4 +103,160 @@
   cursor: pointer;
 }
 
+.Airoasterbot {
+  background: linear-gradient(to right, #00bbff,#6a8af2, #00bbff);
+  width: 80%;
+  max-width: 37.5em;
+  padding: 3em 1.5em;
+  border-radius: 0.6em;
+  margin: 2em auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.Airoasterbot h3 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.Airoasterbot input {
+  width: 80%;
+  padding: 0.8em;
+  border-radius: 0.4em;
+  border: none;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.Airoasterbot button {
+  padding: 1em 2em;
+  background-color: #fff;
+  color: #3f5efb;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Airoasterbot button:hover {
+  background-color: #e0e0e0;
+}
+
+.Airoasterbot textarea {
+  width: 100%;
+  height: 80px;
+  margin-top: 2em;
+  border-radius: 0.5em;
+  padding: 1em;
+  border: none;
+  font-size: 1em;
+  resize: none;
+}
+
+@media (max-width: 768px) {
+  .Airoasterbot {
+    width: 90%;
+    padding: 2em 1em;
+  }
+
+  .Airoasterbot input,
+  .Airoasterbot textarea {
+    width: 100%;
+  }
+
+  .Airoasterbot h3 {
+    font-size: 1.5em;
+  }
+
+  .Airoasterbot button {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .Memegeneratorcontainer {
+    top: 10%;
+    left: 10%;
+    width: 90%;
+    padding: 2em 1em;
+  }
+
+  .Memegeneratorcontainer img {
+    width: 100%;
+    height: auto;
+  }
+
+  .genratememesdesign,
+  .downloadmemedesign {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .Getstartpage-design {
+    flex-direction: column;
+    text-align: center;
+    padding: 1em;
+  }
+
+  .backbuttondesign {
+    margin-left: 0;
+    margin-top: 1em;
+  }
+}
+
+
+/* Small devices (phones, 600px and under) */
+@media (max-width: 600px) {
+  .Memegeneratorcontainer {
+    width: 95%;
+    top: 8%;
+    left: 2.5%;
+    padding: 1.5em 1em;
+  }
+
+  .Memegeneratorcontainer h3 {
+    font-size: 1.5em;
+  }
+
+  .Memegeneratorcontainer img {
+    width: 100%;
+    height: auto;
+  }
+
+  .genratememesdesign,
+  .downloadmemedesign {
+    width: 100%;
+    font-size: 1em;
+    height: 2.8em;
+  }
+
+  .button-row {
+    flex-direction: column;
+    gap: 0.8em;
+    width: 100%;
+  }
+
+  .Getstartpage-design {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 0.5em;
+    position: static;
+  }
+
+  .backbuttondesign {
+    width: 80%;
+    height: 3em;
+    font-size: 1em;
+  }
+}
