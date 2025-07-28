@@ -7,9 +7,9 @@
 .section {
   height: 100vh;
   scroll-snap-align: start;
-  padding: 2rem;
+  padding: 0rem;
   background: #f9f9f9;
-  border-bottom: 2px solid black;
+  border-bottom: 10px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@
   flex-direction: row;
   color: white;
   min-width: 100%;
-  margin-bottom: 57%;
+  margin-bottom: 54%;
   background-color: rgb(41, 112, 253);
   position: fixed;
 }
@@ -45,4 +45,11 @@
 .backbuttondesign:hover {
   color: black;
   font-weight: bold;
+}
+
+.Memesgenerate{
+  background: linear-gradient(to right, #00bbff,#436cf3, #00bbff);
+  width: 110% ;
+  height: 100%;
+  
 }

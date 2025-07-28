@@ -13,6 +13,7 @@ const Getstart = () => {
                     <button className="backbuttondesign" onClick={() => navigate('/')}>Back</button></div>
                     <div className="Memesgenerate">
                         <h3>🎭 Meme Generator</h3>
+                        
                         <button className="genratememesdesign">Click to generate Memes</button>
                     </div></section>
             <section className="section">
