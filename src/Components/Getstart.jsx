@@ -180,13 +180,17 @@ const Getstart = () => {
                     <h3>🎮 Mini Games</h3>
                     <div className="Minigames-section">
                         <ul>
-                            <li className="game-item game-1" >Tic Tac Toe</li>
-                            <li className="game-item game-2" >Rock Paper Scissors</li>
-                            <li className="game-item game-3" >Typing Speed Test</li>
+                            <li className="game-item game-1" >Tic Tac Toe
+                                <button> Play with AI</button>
+                                <button>Play with Friend</button>
+                            </li>
+                            <li className="game-item game-2" >Rock Paper Scissors
+                            <button>Play with AI</button></li>
+                            <li className="game-item game-3" >Typing Speed Test 
+                                <button>Start Test</button>
+                            </li>
                         </ul>
                     </div>
-
-               
                 </div>
             </section>
 
