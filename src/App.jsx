@@ -13,8 +13,7 @@ function App(){
       <Route path='/getstart' element={<Getstart/>}/>
       <Route path='/TicTacToe' element={<TicTacToe/>}/>
       <Route path='/RPSgame' element={<RPSgame/>}/>
-      <Route path='/typinggame' element={<TypingGame/>}/>
-      
+      <Route path='/typinggame' element={<TypingGame/>}/>      
     </Routes>
   )
 }
