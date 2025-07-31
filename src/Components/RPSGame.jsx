@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './RPSstyle.css'; 
 import { useNavigate } from 'react-router-dom';
-
+import './RPSstyle.css';
 
 const choices = [
   { name: 'rock', emoji: '✊' },
@@ -9,7 +8,6 @@ const choices = [
   { name: 'scissors', emoji: '✌️' },
 ];
 
-// --- Main App Component ---
 function RPSgame() {
   const [isGameStarted, setGameStarted] = useState(false);
   const [userChoice, setUserChoice] = useState(null);
@@ -38,14 +36,14 @@ function RPSgame() {
 
     if (useSmartLogic && userMoveHistory.length > 0) {
       const lastUserMove = userMoveHistory[userMoveHistory.length - 1];
-      
+
       const whatBeatsUserLastMove = choices.find(
         (c) =>
           (c.name === 'rock' && lastUserMove === 'scissors') ||
           (c.name === 'paper' && lastUserMove === 'rock') ||
           (c.name === 'scissors' && lastUserMove === 'paper')
       );
-      
+
       const counterToAnticipatedMove = choices.find(
         (c) =>
           (c.name === 'rock' && whatBeatsUserLastMove.name === 'scissors') ||
@@ -88,7 +86,7 @@ function RPSgame() {
     setResult(null);
     setIsRoundOver(false);
   };
-  
+
   const handleGoBack = () => {
     setGameStarted(false);
     setUserChoice(null);
@@ -165,23 +163,22 @@ function RPSgame() {
   );
 
   const renderStartScreen = () => (
-     <div className="app-container">
-        <div className="start-screen">
-          <h1>Rock Paper Scissors</h1>
-          <p>Can you beat the advanced AI?</p>
-          <button className="btn-start" onClick={() => setGameStarted(true)}>
-            Start Game
-          </button>
-          <button onClick={()=>Navigate('/getstart')} className="btn-start" >
-            Back to Menu
-          </button>
-        </div>
+    <div className="app-container">
+      <div className="start-screen">
+        <h1>Rock Paper Scissors</h1>
+        <p>Can you beat the advanced AI?</p>
+        <button className="btn-start" onClick={() => setGameStarted(true)}>
+          Start Game
+        </button>
+        <button onClick={() => Navigate('/getstart')} className="btn-start" >
+          Back to Menu
+        </button>
       </div>
+    </div>
   );
 
   return (
     <>
-
       {isGameStarted ? renderGame() : renderStartScreen()}
     </>
   );

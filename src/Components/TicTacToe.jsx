@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './TicTacToe.css';
 
-
 const initialBoard = Array(9).fill(null);
 const player = 'X';
 const ai = 'O';

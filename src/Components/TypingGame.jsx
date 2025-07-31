@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Typinggame.css'; 
+import './Typinggame.css';
 
 const TEXT_SAMPLES = [
   "The quick brown fox jumps over the lazy dog. This sentence contains every letter of the alphabet. Learning to type quickly and accurately is a valuable skill in today's digital world. Practice regularly to improve your speed.",
@@ -14,7 +14,7 @@ function TypingGame() {
   const [textToType, setTextToType] = useState('');
   const [userInput, setUserInput] = useState('');
   const [timer, setTimer] = useState(60);
-  const [gameState, setGameState] = useState('waiting'); 
+  const [gameState, setGameState] = useState('waiting');
   const [wpm, setWpm] = useState(0);
   const [accuracy, setAccuracy] = useState(0);
   const inputRef = useRef(null);
@@ -34,7 +34,7 @@ function TypingGame() {
     }
     inputRef.current?.focus();
   };
-  
+
   useEffect(() => {
     resetGame();
   }, []);
@@ -61,27 +61,26 @@ function TypingGame() {
     }
     setUserInput(value);
   };
-  
+
   const calculateResults = () => {
     const wordsTyped = userInput.trim().split(/\s+/).length;
     const timeElapsedInMinutes = (60 - timer) / 60;
-    
+
     let correctChars = 0;
     const typedChars = userInput.length;
-    
+
     textToType.split('').forEach((char, index) => {
-        if (userInput[index] === char) {
-            correctChars++;
-        }
+      if (userInput[index] === char) {
+        correctChars++;
+      }
     });
 
     const calculatedWpm = timeElapsedInMinutes > 0 ? Math.round((correctChars / 5) / timeElapsedInMinutes) : 0;
     const calculatedAccuracy = typedChars > 0 ? Math.round((correctChars / typedChars) * 100) : 0;
-
     setWpm(calculatedWpm);
     setAccuracy(calculatedAccuracy);
   };
-  
+
 
   const renderText = () => {
     return textToType.split('').map((char, index) => {
@@ -132,7 +131,7 @@ function TypingGame() {
               Restart Test
             </button>
             <button className='restart-btn' onClick={() => navigate('/getstart')}>
-                Back to Menu
+              Back to Menu
             </button>
           </div>
         </div>
@@ -141,14 +140,14 @@ function TypingGame() {
             <div className="results-box">
               <h2>Test Complete!</h2>
               <div className="stats">
-                 <div className="stat-item">
-                    WPM
-                    <span>{wpm}</span>
-                  </div>
-                  <div className="stat-item">
-                    Accuracy
-                    <span>{accuracy}%</span>
-                  </div>
+                <div className="stat-item">
+                  WPM
+                  <span>{wpm}</span>
+                </div>
+                <div className="stat-item">
+                  Accuracy
+                  <span>{accuracy}%</span>
+                </div>
               </div>
               <div className="controls">
                 <button className="restart-btn" onClick={resetGame}>
