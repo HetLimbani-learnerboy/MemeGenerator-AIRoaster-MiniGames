@@ -179,7 +179,17 @@
   resize: none;
 }
 
-.Minigames-section ul{
+.Minigames h3 {
+  font-size: 2em;
+  text-align: center;
+  text-decoration: double;
+  border-bottom: 3px solid #1976d2;
+  margin-bottom: 10%;
+
+  
+}
+
+.Minigames-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -197,33 +207,38 @@
   margin-left: 10%;
   width: 400px;
   height: 200px;
+  margin-bottom: 5%;
+
 
 }
+
 .game-item {
   color: white;
   font-size: 2em;
   margin: 20px 20px;
-  margin-bottom: 1em;
   text-align: center;
 }
+
 .game-item button {
   background-color: #fff;
-  color: #3f5efb; 
-
+  color: #3f5efb;
   vertical-align: middle;
   border-radius: 40px;
+  cursor: pointer;
   width: 200px;
   padding: 20px 20px;
 }
 
-.game-1 button{
- margin-top: 5%;
+.game-1 button {
+  margin-top: 5%;
 }
-.game-2 button{
- margin-top: 7%;
+
+.game-2 button {
+  margin-top: 7%;
 }
-.game-3 button{
- margin-top: 20%;
+
+.game-3 button {
+  margin-top: 20%;
 }
 
 @media (max-width: 768px) {
