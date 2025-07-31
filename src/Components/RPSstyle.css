@@ -1,0 +1,243 @@
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    color: #e0e0e0;
+}
+
+.start-screen {
+    /* background-color: #16213e; */
+    background: linear-gradient(to right, #00bbff, #6a8af2, #00bbff);
+    color: white;
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.start-screen h1 {
+    font-size: 3rem;
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.start-screen p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-start {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 6%;
+    text-align: center;
+    background-color: #00bfff;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-start:hover {
+    transform: translateY(-3px);
+    background-color: #1e90ff;
+}
+
+/* Game Container */
+.RPSgame-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    /* background-color: #16213e; */
+    background: linear-gradient(to right, #00bbff, #6a8af2, #00bbff);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.btn-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: white;
+    color: black;
+    font-weight: bolder;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+
+.RPSgame-title {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.score {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.score p {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.score span {
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* Choice Area */
+.choice-area {
+    margin: 40px 0;
+}
+
+.choice-area p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-choice {
+    background: none;
+    border: 3px solid #00bfff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-choice:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 191, 255, 0.1);
+}
+
+/* Result Area */
+.result-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.choice-display {
+    flex: 1;
+}
+
+.choice-label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.choice-emoji {
+    font-size: 4rem;
+    margin: 0;
+    line-height: 1;
+}
+
+.result-message {
+    flex: 1.5;
+    padding: 0 1rem;
+}
+
+.result-message h2 {
+    font-size: 2.5rem;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    
+}
+
+.result-win {
+    color: green;
+}
+
+.result-lose {
+    color: red;
+}
+
+.result-draw {
+    color: white
+}
+
+.btn-rematch {
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-rematch:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .start-screen h1 {
+        font-size: 2rem;
+    }
+
+    .RPSgame-title {
+        font-size: 1.8rem;
+    }
+
+    .result-message h2 {
+        font-size: 1.8rem;
+    }
+
+    .result-area {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .choice-emoji {
+        font-size: 3rem;
+    }
+}

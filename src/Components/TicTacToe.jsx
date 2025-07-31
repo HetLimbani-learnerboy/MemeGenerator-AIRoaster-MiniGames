@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './TicTacToe.css';
+
 
 const initialBoard = Array(9).fill(null);
 const player = 'X';
 const ai = 'O';
-
 
 function calculateWinner(squares) {
   const lines = [
@@ -77,6 +78,7 @@ const TicTacToe = () => {
   const [board, setBoard] = useState(initialBoard);
   const [xIsNext, setXIsNext] = useState(true);
   const [aiDifficulty, setAiDifficulty] = useState('hard');
+  const navigate = useNavigate();
 
   const winner = calculateWinner(board);
   const isDraw = isBoardFull(board) && !winner;
@@ -147,6 +149,7 @@ const TicTacToe = () => {
           <h2>Select Game Mode</h2>
           <button onClick={() => handleModeSelect('friends')}>Play with Friend</button>
           <button onClick={() => handleModeSelect('ai')}>Play with AI</button>
+          <button onClick={()=>navigate('/getstart')}>Back to Menu</button>
         </div>
       ) : (
         <>

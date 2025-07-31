@@ -187,7 +187,7 @@ const Getstart = () => {
                             <li className="game-item game-1" >Tic Tac Toe
                                 <button onClick={tictactoe}> Play </button>
                             </li>
-                            <li className="game-item game-2" >Rock Paper Scissors
+                            <li className="game-item game-2"  onClick={()=>navigate('/RPSgame')}>Rock Paper Scissors
                             <button>Play with AI</button></li>
                             <li className="game-item game-3" >Typing Speed Test 
                                 <button>Start Test</button>

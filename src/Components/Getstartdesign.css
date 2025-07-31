@@ -65,7 +65,7 @@
 }
 
 .Memesgenerate {
-  background: linear-gradient(to right, #00bbff, #6a8af2, #00bbff);
+  
   width: 100%;
   height: 100%;
   padding: 0%;
@@ -74,6 +74,7 @@
 }
 
 .Memegeneratorcontainer {
+  background: linear-gradient(to right, #00bbff, #6a8af2, #00bbff);
   width: 80%;
   max-width: 37.5em;
   padding: 3em 1.5em;
@@ -115,8 +116,8 @@
 .genratememesdesign {
   width: 25em;
   height: 3em;
-  background-color: #1976d2;
-  color: white;
+  background-color: white;
+  color: black;
   border: none;
   border-radius: 0.5em;
   font-size: 1.2em;
@@ -185,8 +186,6 @@
   text-decoration: double;
   border-bottom: 3px solid #1976d2;
   margin-bottom: 10%;
-
-
 }
 
 .Minigames-section ul {
