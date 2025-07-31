@@ -161,10 +161,12 @@ const TicTacToe = () => {
                 <option value="hard">Hard</option>
               </select>
             </div>
-          )}
+          )}<div className="game-layout">
+            <h2>Tic Tac Toe</h2>
           <div className="status">
             {getStatusMessage()}
           </div>
+          
           <div className="board">
             {[0, 1, 2].map(row => (
               <div key={row} className="board-row">
@@ -177,7 +179,7 @@ const TicTacToe = () => {
               <button onClick={handleRematch}>Rematch</button>
             )}
             <button onClick={() => handleModeSelect('')}>Back to Menu</button>
-          </div>
+          </div></div>
         </>
       )}
     </div>
