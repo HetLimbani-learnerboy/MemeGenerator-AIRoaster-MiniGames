@@ -5,14 +5,14 @@ import "./Homepage.css";
 function Homepage() {
   const featuresRef = useRef(null);
   const [showFeatures, setShowFeatures] = useState(false);
-  const navigate = useNavigate(); // Correct usage
+  const navigate = useNavigate(); 
 
   const scrollToFeatures = () => {
-  if (!showFeatures) setShowFeatures(true);
-  setTimeout(() => {
-    featuresRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, 100); 
-};
+    if (!showFeatures) setShowFeatures(true);
+    setTimeout(() => {
+      featuresRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100 && !showFeatures) {

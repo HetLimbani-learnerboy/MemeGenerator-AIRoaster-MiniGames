@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import "./Getstartdesign.css";
-import TicTacToe from "./TicTacToe";
 
 const Getstart = () => {
     const navigate = useNavigate();
@@ -19,7 +18,6 @@ const Getstart = () => {
         ];
 
         let randomSubreddit = subreddits[Math.floor(Math.random() * subreddits.length)];
-
         fetch(url + randomSubreddit)
             .then((response) => response.json())
             .then((data) => {
@@ -142,11 +140,9 @@ const Getstart = () => {
             ];
             const randomLine = roastLines[Math.floor(Math.random() * roastLines.length)];
             const roasted = randomLine.replace(/pname/gi, pname.value.trim());
-
             output.value = roasted;
             console.log(`Roasting ${pname.value.trim()}: ${roasted}`);
         }
-
     }
 
     return (
@@ -178,7 +174,6 @@ const Getstart = () => {
                 </div>
             </section>
 
-
             <section className="section">
                 <div className="Minigames">
                     <h3>🎮 Mini Games</h3>
@@ -187,17 +182,15 @@ const Getstart = () => {
                             <li className="game-item game-1" >Tic Tac Toe
                                 <button onClick={tictactoe}> Play </button>
                             </li>
-                            <li className="game-item game-2"  onClick={()=>navigate('/RPSgame')}>Rock Paper Scissors
-                            <button>Play with AI</button></li>
-                            <li className="game-item game-3" >Typing Speed Test 
-                                <button onClick={()=>navigate('/typinggame')}>Start Test</button>
+                            <li className="game-item game-2" onClick={() => navigate('/RPSgame')}>Rock Paper Scissors
+                                <button>Play with AI</button></li>
+                            <li className="game-item game-3" >Typing Speed Test
+                                <button onClick={() => navigate('/typinggame')}>Start Test</button>
                             </li>
                         </ul>
                     </div>
                 </div>
             </section>
-
-
         </div>
     );
 };

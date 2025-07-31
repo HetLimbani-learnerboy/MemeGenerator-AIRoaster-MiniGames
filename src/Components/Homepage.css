@@ -3,12 +3,13 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f7f7f7;
 }
+
 .homepage-design {
     min-height: 200vh;
     padding: 0;
     transition: background-color 0.5s ease;
-
 }
+
 .homepage-title {
     display: flex;
     flex-direction: column;
@@ -93,7 +94,7 @@ body {
 .feature-box:hover {
     color: black;
     transform: scale(1.05);
-    border: 2px solid  #e67e22;
+    border: 2px solid #e67e22;
 }
 
 .bounce {
@@ -112,7 +113,6 @@ body {
     animation-name: scaleUp;
 }
 
-/* Animations */
 @keyframes bounceIn {
     0% {
         transform: translateY(-30px);
@@ -159,7 +159,6 @@ body {
     }
 }
 
-/* Button Bounce Hover Animation */
 @keyframes bounce {
     0% {
         transform: scale(1);
