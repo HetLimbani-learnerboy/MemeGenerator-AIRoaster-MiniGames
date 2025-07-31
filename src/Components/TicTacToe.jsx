@@ -8,9 +8,9 @@ const ai = 'O';
 
 function calculateWinner(squares) {
   const lines = [
-    [0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
-    [0, 3, 6], [1, 4, 7], [2, 5, 8], // columns
-    [0, 4, 8], [2, 4, 6]             // diagonals
+    [0, 1, 2], [3, 4, 5], [6, 7, 8], 
+    [0, 3, 6], [1, 4, 7], [2, 5, 8], 
+    [0, 4, 8], [2, 4, 6]             
   ];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
@@ -25,7 +25,6 @@ function isBoardFull(squares) {
   return squares.every(square => square !== null);
 }
 
-// Minimax algorithm for the unbeatable AI
 function minimax(newBoard, isMaximizing) {
   const winner = calculateWinner(newBoard);
   if (winner === ai) return { score: 10 };
@@ -46,7 +45,7 @@ function minimax(newBoard, isMaximizing) {
         let result = minimax(newBoard, true);
         move.score = result.score;
       }
-      newBoard[i] = null; // Reset the spot
+      newBoard[i] = null; 
       moves.push(move);
     }
   }
@@ -73,10 +72,8 @@ function minimax(newBoard, isMaximizing) {
 }
 
 
-// --- React Component ---
-
 const TicTacToe = () => {
-  const [mode, setMode] = useState(''); // '', 'friends', 'ai'
+  const [mode, setMode] = useState('');
   const [board, setBoard] = useState(initialBoard);
   const [xIsNext, setXIsNext] = useState(true);
   const [aiDifficulty, setAiDifficulty] = useState('hard');
@@ -85,14 +82,12 @@ const TicTacToe = () => {
   const isDraw = isBoardFull(board) && !winner;
   const currentPlayer = xIsNext ? 'X' : 'O';
 
-  // Effect to handle AI's turn
   useEffect(() => {
-    // If it's AI mode, it's O's turn, and the game is not over
     if (mode === 'ai' && !xIsNext && !winner && !isDraw) {
       const timer = setTimeout(() => {
         makeAIMove();
-      }, 500); // Delay for better UX
-      return () => clearTimeout(timer); // Cleanup timer
+      }, 500);
+      return () => clearTimeout(timer); 
     }
   }, [xIsNext, board, mode, winner, isDraw]);
 
@@ -110,11 +105,9 @@ const TicTacToe = () => {
     const boardCopy = [...board];
 
     if (aiDifficulty === 'hard') {
-      // Minimax finds the best move index
       const bestMove = minimax(boardCopy, true);
       move = bestMove.index;
     } else {
-      // Easy mode: pick a random empty square
       const emptyIndexes = board.map((val, index) => val === null ? index : null).filter(val => val !== null);
       move = emptyIndexes[Math.floor(Math.random() * emptyIndexes.length)];
     }
@@ -122,7 +115,7 @@ const TicTacToe = () => {
     if (move !== undefined) {
       boardCopy[move] = ai;
       setBoard(boardCopy);
-      setXIsNext(true); // Switch back to player's turn
+      setXIsNext(true); 
     }
   };
 

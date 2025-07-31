@@ -1,11 +1,12 @@
 /* General Container */
 .game-container {
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
   min-height: 100vh;
-  background: linear-gradient(135deg, #3f5efb, #fc466b);
+  
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -13,6 +14,9 @@
 .mode-select, .difficulty-select {
   text-align: center;
   margin-bottom: 2rem;
+  border: 2px solid #fff;
+  background: linear-gradient(to right, #00bbff, #6a8af2, #00bbff);
+  padding: 40px;
 }
 
 .mode-select h2,

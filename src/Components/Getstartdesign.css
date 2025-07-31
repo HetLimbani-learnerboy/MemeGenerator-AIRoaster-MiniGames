@@ -186,7 +186,7 @@
   border-bottom: 3px solid #1976d2;
   margin-bottom: 10%;
 
-  
+
 }
 
 .Minigames-section ul {
@@ -204,7 +204,6 @@
   padding: 20px;
   flex-direction: column;
   border-radius: 10px;
-  /* margin-left: 10%; */
   width: 400px;
   height: 200px;
   margin-bottom: 5%;
@@ -228,9 +227,14 @@
   cursor: pointer;
   width: 200px;
   padding: 20px 20px;
-margin-top: 20%;
+  margin-top: 20%;
   border: none;
-  
+
+}
+.game-item button:hover {
+  color: #3f5efb;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 
