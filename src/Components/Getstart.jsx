@@ -27,6 +27,10 @@ const Getstart = () => {
             });
     };
 
+    const tictactoe = () => {
+        navigate('/TicTacToe');
+    }
+
     const generateRoast = () => {
         const pname = document.getElementById("personname");
         const output = document.getElementById("roastoutput");
@@ -181,8 +185,7 @@ const Getstart = () => {
                     <div className="Minigames-section">
                         <ul>
                             <li className="game-item game-1" >Tic Tac Toe
-                                <button> Play with AI</button>
-                                <button>Play with Friend</button>
+                                <button onClick={tictactoe}> Play </button>
                             </li>
                             <li className="game-item game-2" >Rock Paper Scissors
                             <button>Play with AI</button></li>

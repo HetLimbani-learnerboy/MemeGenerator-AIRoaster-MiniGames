@@ -1,0 +1,123 @@
+/* General Container */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3f5efb, #fc466b);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Mode & Difficulty Selection */
+.mode-select, .difficulty-select {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mode-select h2,
+.difficulty-select label {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+
+.mode-select button,
+.difficulty-select select,
+.status + button {
+  background-color: #fff;
+  color: #3f5efb;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  padding: 15px 30px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.mode-select button:hover,
+.difficulty-select select:hover,
+.status + button:hover {
+  background-color: #dbeafe;
+}
+
+/* Board Styling */
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Game Square Styling */
+.square {
+  width: 80px;
+  height: 80px;
+  font-size: 2em;
+  color: #3f5efb;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.square:hover {
+  background-color: #f1f5f9;
+}
+
+/* Game Status */
+.status {
+  font-size: 1.5em;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .square {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+  }
+
+  .mode-select h2,
+  .difficulty-select label {
+    font-size: 1.5em;
+  }
+
+  .mode-select button,
+  .difficulty-select select,
+  .status + button {
+    width: 160px;
+    font-size: 0.9em;
+    padding: 12px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .square {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
+  }
+
+  .mode-select button,
+  .difficulty-select select,
+  .status + button {
+    width: 140px;
+    font-size: 0.85em;
+    padding: 10px 16px;
+  }
+}

@@ -204,12 +204,10 @@
   padding: 20px;
   flex-direction: column;
   border-radius: 10px;
-  margin-left: 10%;
+  /* margin-left: 10%; */
   width: 400px;
   height: 200px;
   margin-bottom: 5%;
-
-
 }
 
 .game-item {
@@ -217,6 +215,8 @@
   font-size: 2em;
   margin: 20px 20px;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .game-item button {
@@ -224,22 +224,15 @@
   color: #3f5efb;
   vertical-align: middle;
   border-radius: 40px;
+  border: none;
   cursor: pointer;
   width: 200px;
   padding: 20px 20px;
+margin-top: 20%;
+  border: none;
+  
 }
 
-.game-1 button {
-  margin-top: 5%;
-}
-
-.game-2 button {
-  margin-top: 7%;
-}
-
-.game-3 button {
-  margin-top: 20%;
-}
 
 @media (max-width: 768px) {
   .Airoasterbot {
