@@ -4,6 +4,7 @@ import Homepage from './Components/Homepage.jsx'
 import Getstart from './Components/Getstart.jsx'
 import TicTacToe from './Components/TicTacToe.jsx'
 import RPSgame from './Components/RPSGame.jsx'
+import TypingGame from './Components/TypingGame.jsx'
 
 function App(){
   return(
@@ -12,6 +13,7 @@ function App(){
       <Route path='/getstart' element={<Getstart/>}/>
       <Route path='/TicTacToe' element={<TicTacToe/>}/>
       <Route path='/RPSgame' element={<RPSgame/>}/>
+      <Route path='/typinggame' element={<TypingGame/>}/>
       
     </Routes>
   )

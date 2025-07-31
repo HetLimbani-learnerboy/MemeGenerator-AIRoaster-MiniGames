@@ -190,7 +190,7 @@ const Getstart = () => {
                             <li className="game-item game-2"  onClick={()=>navigate('/RPSgame')}>Rock Paper Scissors
                             <button>Play with AI</button></li>
                             <li className="game-item game-3" >Typing Speed Test 
-                                <button>Start Test</button>
+                                <button onClick={()=>navigate('/typinggame')}>Start Test</button>
                             </li>
                         </ul>
                     </div>
