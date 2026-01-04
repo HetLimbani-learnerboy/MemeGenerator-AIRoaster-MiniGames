@@ -4,233 +4,275 @@
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
     margin: 0;
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+    font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
     color: #e0e0e0;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .start-screen {
     background: linear-gradient(to right, #00bbff, #6a8af2, #00bbff);
     color: white;
-    padding: 40px 60px;
+    padding: clamp(20px, 5vw, 40px) clamp(20px, 8vw, 60px);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    animation: fadeInScale 0.6s ease-out;
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .start-screen h1 {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 6vw, 3rem);
     color: white;
     font-weight: bolder;
     margin-bottom: 10px;
 }
 
 .start-screen p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     margin-bottom: 30px;
 }
 
 .btn-start {
     display: flex;
-    flex-direction: column;
-    width: 400px;
-    margin-top: 20px;
-    margin-left: 6%;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 300px;
     background-color: #00bfff;
     color: white;
-    font-size: 1.5rem;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
     font-weight: 600;
-    padding: 15px 40px;
+    padding: 15px 0;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-start:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
     background-color: #1e90ff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .RPSgame-container {
     position: relative;
     width: 100%;
     max-width: 800px;
-    /* background-color: #16213e; */
     background: linear-gradient(to right, #00bbff, #6a8af2, #00bbff);
-    padding: 30px;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    animation: slideUp 0.5s ease-out;
+    box-sizing: border-box;
 }
 
 .btn-back {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
     background: white;
     color: black;
     font-weight: bolder;
     border: none;
-    padding: 10px 15px;
+    padding: 8px 15px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.2s;
+    font-size: 0.9rem;
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 10;
+}
+
+.btn-back:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
 }
 
 .RPSgame-title {
-    margin-top: 10px;
-    font-size: 2.5rem;
+    margin: 20px 0 10px 0;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     color: white;
 }
 
 .scoreboard {
     display: flex;
     justify-content: space-around;
-    margin: 30px 0;
+    margin: 20px 0;
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-}
-
-.score {
-    font-size: 1.5rem;
-    font-weight: 600;
+    backdrop-filter: blur(5px);
 }
 
 .score p {
     margin: 0 0 5px 0;
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
     font-weight: 400;
 }
 
 .score span {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     color: white;
+    font-weight: 700;
 }
 
 .choice-area {
-    margin: 40px 0;
-}
-
-.choice-area p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin: 30px 0;
 }
 
 .choices {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: clamp(10px, 3vw, 25px);
     flex-wrap: wrap;
 }
 
 .btn-choice {
-    background: none;
+    background: rgba(255, 255, 255, 0.1);
     border: 3px solid #00bfff;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    font-size: 3rem;
+    width: clamp(70px, 15vw, 100px);
+    height: clamp(70px, 15vw, 100px);
+    font-size: clamp(2rem, 5vw, 3rem);
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
+    transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .btn-choice:hover {
-    transform: scale(1.1);
-    background-color: rgba(0, 191, 255, 0.1);
+    transform: scale(1.15) rotate(5deg);
+    background-color: white;
 }
 
 .result-area {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 40px 0;
+    margin: 30px 0;
+    gap: 15px;
 }
 
 .choice-display {
     flex: 1;
+    animation: fadeIn 0.4s ease-in;
 }
 
 .choice-label {
-    font-size: 1.2rem;
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .choice-emoji {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 8vw, 4rem);
     margin: 0;
-    line-height: 1;
+    line-height: 1.2;
 }
 
 .result-message {
-    flex: 1.5;
-    padding: 0 1rem;
+    flex: 2;
 }
 
 .result-message h2 {
-    font-size: 2.5rem;
-    margin: 0 0 20px 0;
-    font-weight: 700;
+    font-size: clamp(1.5rem, 5vw, 2.8rem);
+    margin: 0 0 15px 0;
+    font-weight: 800;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-.result-win {
-    color: green;
-}
-
-.result-lose {
-    color: red;
-}
-
-.result-draw {
-    color: white
-}
+.result-win { color: #2ecc71; animation: celebrate 0.5s ease; }
+.result-lose { color: #e74c3c; animation: shake 0.4s ease; }
+.result-draw { color: white; }
 
 .btn-rematch {
     background-color: white;
     color: black;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     padding: 12px 30px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .btn-rematch:hover {
     transform: translateY(-3px);
+    background-color: #f8f8f8;
 }
 
-@media (max-width: 600px) {
-    .start-screen h1 {
-        font-size: 2rem;
-    }
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
 
-    .RPSgame-title {
-        font-size: 1.8rem;
-    }
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-    .result-message h2 {
-        font-size: 1.8rem;
-    }
+@keyframes celebrate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
 
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 650px) {
     .result-area {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .choice-emoji {
-        font-size: 3rem;
+    .result-message {
+        order: -1;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .choice-display {
+        flex: 0 1 40%;
+    }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+    .app-container {
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+    
+    .RPSgame-container {
+        padding: 15px;
+    }
+
+    .scoreboard {
+        margin: 10px 0;
     }
 }

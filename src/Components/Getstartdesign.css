@@ -2,338 +2,250 @@
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
+  font-family: sans-serif;
 }
 
 .section {
   height: 100vh;
   scroll-snap-align: start;
-  padding: 0rem;
+  padding: 1rem;
   background: #f9f9f9;
-  border-bottom: 10px solid black;
+  border-bottom: 5px solid #333;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .Getstartpage-design {
   display: flex;
-  margin-top: 1%;
-  margin-left: 2%;
-  color: white;
-  min-width: 100%;
-  margin-bottom: 53%;
-  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  position: absolute;
+  top: 20px;
+  z-index: 10;
 }
 
 .Getstartpage-design h1 {
   background: white;
-  width: 30%;
-  height: 50px;
+  padding: 10px 20px;
   border: 2px solid #1976d2;
   border-radius: 30px;
-  font-size: 20px;
-  position: relative;
-  transition: color 0.3s ease;
-  border: 2px solid #1976d2;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   color: black;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  animation: slideDown 0.5s ease-out;
 }
 
 .backbuttondesign {
-  margin-left: 61%;
   background: white;
   width: 100px;
   height: 50px;
-  margin-top: 0.7%;
   border: 2px solid #1976d2;
   border-radius: 30px;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  transition: color 0.3s ease;
+  transition: transform 0.2s, background-color 0.3s;
 }
 
 .backbuttondesign:hover {
-  color: black;
-  font-weight: bold;
+  background-color: #1976d2;
+  color: white;
+  transform: scale(1.05);
 }
 
 .Memesgenerate {
-
   width: 100%;
-  height: 100%;
-  padding: 0%;
-  margin: 0;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 .Memegeneratorcontainer {
   background: linear-gradient(to right, #00bbff, #6a8af2, #00bbff);
-  width: 80%;
-  max-width: 37.5em;
-  padding: 3em 1.5em;
-  background-color: #ffffff;
-  position: relative;
-  top: 15%;
-  left: 30%;
-  border-radius: 0.6em;
-
+  width: 90%;
+  max-width: 500px;
+  padding: 2em;
+  border-radius: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 0.8s ease-in;
 }
 
 .Memegeneratorcontainer img {
-  display: block;
-  width: 80%;
-  height: 25em;
-  margin: 0 auto 1em auto;
+  width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+  border-radius: 0.5em;
+  background: #eee;
+  margin-bottom: 1.5em;
 }
 
 .Memegeneratorcontainer h3 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-.Memegeneratorcontainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.Memegeneratorcontainer .button-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-  margin-top: 1em;
+  color: white;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
 }
 
 .genratememesdesign {
-  width: 25em;
-  height: 3em;
+  width: 100%;
+  padding: 12px;
   background-color: white;
-  color: black;
-  border: none;
-  border-radius: 0.5em;
-  font-size: 1.2em;
-  cursor: pointer;
-}
-
-.Airoasterbot {
-  background: linear-gradient(to right, #00bbff, #6a8af2, #00bbff);
-  width: 80%;
-  max-width: 37.5em;
-  padding: 3em 1.5em;
-  border-radius: 0.6em;
-  margin: 2em auto;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.Airoasterbot h3 {
-  font-size: 2em;
-  margin-bottom: 1em;
-  text-align: center;
-}
-
-.Airoasterbot input {
-  width: 80%;
-  padding: 0.8em;
-  border-radius: 0.4em;
-  border: none;
-  font-size: 1em;
-  margin-bottom: 1em;
-}
-
-.Airoasterbot button {
-  padding: 1em 2em;
-  background-color: #fff;
-  color: #3f5efb;
+  color: #1976d2;
   border: none;
   border-radius: 0.5em;
   font-size: 1.1em;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s;
+}
+
+.genratememesdesign:active {
+  transform: scale(0.98);
+}
+
+.Airoasterbot {
+  background: linear-gradient(to right, #00bbff, #6a8af2, #00bbff);
+  width: 90%;
+  max-width: 500px;
+  padding: 2em;
+  border-radius: 1.2em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scaleUp 0.5s ease-out;
+}
+
+.Airoasterbot input {
+  width: 90%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.Airoasterbot button {
+  padding: 12px 30px;
+  background-color: #fff;
+  color: #3f5efb;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
 }
 
 .Airoasterbot button:hover {
-  background-color: #e0e0e0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .Airoasterbot textarea {
   width: 100%;
-  height: 80px;
-  margin-top: 2em;
-  border-radius: 0.5em;
-  padding: 1em;
+  margin-top: 1.5em;
+  border-radius: 8px;
+  padding: 12px;
   border: none;
-  font-size: 1em;
   resize: none;
+  background: rgba(255,255,255,0.9);
 }
 
 .Minigames h3 {
-  font-size: 2em;
+  font-size: 2.2em;
   text-align: center;
-  text-decoration: double;
-  border-bottom: 3px solid #1976d2;
-  margin-bottom: 10%;
+  border-bottom: 4px solid #1976d2;
+  padding-bottom: 10px;
+  margin-bottom: 2rem;
 }
 
 .Minigames-section ul {
   list-style: none;
   padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-}
-
-.Minigames-section li {
-  background: linear-gradient(to right, #00bbff, #6a8af2, #00bbff);
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  flex-direction: column;
-  border-radius: 10px;
-  width: 400px;
-  height: 200px;
-  margin-bottom: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 90vw;
+  max-width: 1200px;
 }
 
 .game-item {
+  background: linear-gradient(to right, #00bbff, #6a8af2, #00bbff);
+  padding: 30px;
+  border-radius: 15px;
   color: white;
-  font-size: 2em;
-  margin: 20px 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.game-item:hover {
+  transform: translateY(-10px);
 }
 
 .game-item button {
   background-color: #fff;
   color: #3f5efb;
-  vertical-align: middle;
-  border-radius: 40px;
+  border-radius: 25px;
   border: none;
   cursor: pointer;
-  width: 200px;
-  padding: 20px 20px;
-  margin-top: 20%;
-  border: none;
-
+  width: 150px;
+  padding: 12px;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
-.game-item button:hover {
-  color: #3f5efb;
-  transform: scale(1.05);
-  transition: all 0.3s ease;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
 
 @media (max-width: 768px) {
-  .Airoasterbot {
-    width: 90%;
-    padding: 2em 1em;
+  .Getstartpage-design {
+    flex-direction: column;
+    gap: 10px;
+    top: 10px;
   }
-
-  .Airoasterbot input,
-  .Airoasterbot textarea {
+  
+  .Getstartpage-design h1 {
     width: 100%;
+    text-align: center;
   }
 
-  .Airoasterbot h3 {
-    font-size: 1.5em;
+  .Minigames-section ul {
+    grid-template-columns: 1fr;
+    height: 60vh;
+    overflow-y: auto;
+    padding: 10px;
   }
 
-  .Airoasterbot button {
-    width: 100%;
+  .game-item {
+    padding: 20px;
   }
 }
 
-
-@media (max-width: 1024px) {
-  .Memegeneratorcontainer {
-    top: 10%;
-    left: 10%;
-    width: 90%;
-    padding: 2em 1em;
-  }
-
-  .Memegeneratorcontainer img {
-    width: 100%;
+@media (max-height: 700px) {
+  .section {
     height: auto;
-  }
-
-  .genratememesdesign,
-  .downloadmemedesign {
-    width: 100%;
-    font-size: 1em;
-  }
-
-  .Getstartpage-design {
-    flex-direction: column;
-    text-align: center;
-    padding: 1em;
-  }
-
-  .backbuttondesign {
-    margin-left: 0;
-    margin-top: 1em;
-  }
-}
-
-@media (max-width: 600px) {
-  .Memegeneratorcontainer {
-    width: 95%;
-    top: 8%;
-    left: 2.5%;
-    padding: 1.5em 1em;
-  }
-
-  .Memegeneratorcontainer h3 {
-    font-size: 1.5em;
-  }
-
-  .Memegeneratorcontainer img {
-    width: 100%;
-    height: auto;
-  }
-
-  .genratememesdesign,
-  .downloadmemedesign {
-    width: 100%;
-    font-size: 1em;
-    height: 2.8em;
-  }
-
-  .button-row {
-    flex-direction: column;
-    gap: 0.8em;
-    width: 100%;
-  }
-
-  .Getstartpage-design {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-    text-align: center;
-    margin-bottom: 0;
-    padding: 0.5em;
-    position: static;
-  }
-
-  .backbuttondesign {
-    width: 80%;
-    height: 3em;
-    font-size: 1em;
+    min-height: 100vh;
+    padding: 80px 20px 20px 20px;
   }
 }

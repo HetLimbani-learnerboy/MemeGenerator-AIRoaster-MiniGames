@@ -1,13 +1,8 @@
-body {
-    margin: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f7f7f7;
-}
-
 .homepage-design {
-    min-height: 200vh;
+    min-height: 100vh;
     padding: 0;
     transition: background-color 0.5s ease;
+    overflow-x: hidden;
 }
 
 .homepage-title {
@@ -15,67 +10,96 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(to right, rgb(20, 133, 239), #3e55e6, #13039f);
     color: white;
     text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.homepage-title h3 {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    max-width: 800px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.2s ease-out;
 }
 
 .buttons {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .start-button,
 .feature-button {
-    padding: 1rem 2rem;
+    padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem);
     font-size: 1.1rem;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     background: #ff6a00;
     color: white;
-    transition: all 0.3s ease;
-    margin-left: 40px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .start-button:hover,
 .feature-button:hover {
-    background: #ff6a00;
-    transform: scale(1.2);
-    box-shadow: 10px 20px 16px rgba(254, 252, 252, 0.3);
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 106, 0, 0.4);
 }
 
 .features-section {
     background-color: #ffffff;
-    padding: 4rem 2rem;
+    padding: 5vh 5vw;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .features-heading {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 8vw, 4rem);
     margin-bottom: 3rem;
     color: #2c3e50;
+    position: relative;
+}
+
+.features-heading::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: #ff6a00;
+    margin: 10px auto;
+    border-radius: 3px;
 }
 
 .feature-box {
     background: #f1f1f1;
     border-radius: 15px;
-    padding: 3rem;
-    margin: 3rem auto;
-    max-width: 700px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: clamp(1.5rem, 5vw, 3rem);
+    margin: 1.5rem;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     animation-duration: 0.8s;
+    animation-fill-mode: both;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
 .feature-box h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
     color: #e67e22;
 }
@@ -83,92 +107,81 @@ body {
 .feature-box ul {
     list-style: none;
     padding-left: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.feature-box ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
 }
 
 .feature-box ul li::before {
     content: "✅";
-    color: green;
-    margin-right: 0.5rem;
+    margin-right: 0.8rem;
 }
 
 .feature-box:hover {
-    color: black;
-    transform: scale(1.05);
-    border: 2px solid #e67e22;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e67e22;
 }
 
-.bounce {
-    animation-name: bounceIn;
+.bounce { animation-name: bounceIn; }
+.fade { animation-name: fadeIn; }
+.slide { animation-name: slideIn; }
+.scale { animation-name: scaleUp; }
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.fade {
-    animation-name: fadeIn;
-}
-
-.slide {
-    animation-name: slideIn;
-}
-
-.scale {
-    animation-name: scaleUp;
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes bounceIn {
-    0% {
-        transform: translateY(-30px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    0% { transform: translateY(-50px); opacity: 0; }
+    60% { transform: translateY(10px); }
+    100% { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes slideIn {
-    0% {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    0% { transform: translateX(-50px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes scaleUp {
-    0% {
-        transform: scale(0.7);
-        opacity: 0;
-    }
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
 
-    100% {
-        transform: scale(1);
-        opacity: 1;
+@media (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+    .start-button, .feature-button {
+        margin-left: 0;
+        width: 100%;
+    }
+    .features-heading {
+        font-size: 2.5rem;
     }
 }
 
-@keyframes bounce {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
+@media (orientation: landscape) and (max-height: 500px) {
+    .homepage-title {
+        padding: 40px 20px;
+        height: auto;
+        min-height: 120vh;
     }
 }
